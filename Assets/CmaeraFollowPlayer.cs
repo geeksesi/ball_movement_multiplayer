@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class CmaeraFollowPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public Transform Player;
+
     void Start()
     {
-        
+        // Player = GameObject.Find("Player");
+        transform.position = Player.position + new Vector3(0,0,-3);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Player.position + new Vector3(0,0,-3);
+        // transform.position 
+        // transform.position = Player.position;
     }
 }
