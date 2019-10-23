@@ -12,16 +12,16 @@ public class BallMovment : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if (Input.GetKey (KeyCode.UpArrow)) {
-            transform.position += new Vector3(0,30,0) * Time.deltaTime;
+            transform.position += new Vector3(0,15,0) * Time.deltaTime;
         }
         else if (Input.GetKey (KeyCode.DownArrow)) {
-            transform.position += new Vector3(0,-30,0) * Time.deltaTime;
+            transform.position += new Vector3(0,-15,0) * Time.deltaTime;
         }
         else if (Input.GetKey (KeyCode.RightArrow)) {
-            transform.position += new Vector3(30,0,0) * Time.deltaTime;
+            transform.position += new Vector3(15,0,0) * Time.deltaTime;
         }
         else if (Input.GetKey (KeyCode.LeftArrow)) {
-            transform.position += new Vector3(-30,0,0) * Time.deltaTime;
+            transform.position += new Vector3(-15,0,0) * Time.deltaTime;
         }
     }
 }
