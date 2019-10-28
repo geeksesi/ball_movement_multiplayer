@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DarkRift;
+using DarkRift.Client;
+using DarkRift.Client.Unity;
 public class NetworkBallManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    [Tooltip("The DarkRift client to communicate on.")]
+    UnityClient client;
 
-    // Update is called once per frame
-    void Update()
+    Dictionary<ushort, BallObject> networkBall = new Dictionary<ushort, BallObject>();
+
+    public void Add(ushort id, BallObject player)
     {
-        
+        networkBall.Add(id, player);
     }
 }
