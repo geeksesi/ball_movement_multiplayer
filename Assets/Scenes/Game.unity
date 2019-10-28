@@ -164,7 +164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519048267
 GameObject:
@@ -233,7 +233,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -330,18 +330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae5a22a567f9e646857ed41daac8072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampTime: 0.15
-  Player: {fileID: 570521221}
-  camera: {fileID: 0}
+  speed: 5
 --- !u!1 &570521220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 547414429186291919, guid: 0eb33977e4b9d8d49821a19d0d99af8b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2040223693}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &570521221 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 547414429186291915, guid: 0eb33977e4b9d8d49821a19d0d99af8b,
     type: 3}
   m_PrefabInstance: {fileID: 2040223693}
   m_PrefabAsset: {fileID: 0}
@@ -364,7 +356,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570521220}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db40df6678b31794b9c58303930165e8, type: 3}
   m_Name: 
@@ -399,6 +391,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 547414429186291919, guid: 0eb33977e4b9d8d49821a19d0d99af8b, type: 3}
+  client: {fileID: 0}
+  controllablePrefab: {fileID: 0}
+  networkPrefab: {fileID: 0}
 --- !u!4 &648125619
 Transform:
   m_ObjectHideFlags: 0
@@ -411,7 +406,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2040223693
 PrefabInstance:
@@ -424,6 +419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 547414429186291919, guid: 0eb33977e4b9d8d49821a19d0d99af8b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 547414429186291915, guid: 0eb33977e4b9d8d49821a19d0d99af8b,
         type: 3}
@@ -463,7 +463,7 @@ PrefabInstance:
     - target: {fileID: 547414429186291915, guid: 0eb33977e4b9d8d49821a19d0d99af8b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 547414429186291915, guid: 0eb33977e4b9d8d49821a19d0d99af8b,
         type: 3}
